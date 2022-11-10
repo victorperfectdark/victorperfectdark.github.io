@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Html CRUD with Pure JavaScript
+    </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <!-- <div>
+                        <label>Marca*</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                        <input type="text" name="Marca" id="Marca"> 
+                    </div> -->
+                    <div>
+                        <label>Marca*</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                        <select name="Marca" id="Marca">
+                            <option value="samsung">samsung</option>
+                            <option value="sony">sony</option>
+                            <option value="xaomi">xaomi</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label>Modelo</label>
+                        <input type="text" name="modelo" id="modelo">
+                    </div>
+                    <div>
+                        <label>Imei</label>
+                        <input type="text" name="imei" id="imei">
+                    </div>
+                    <div>
+                        <label>Base</label>
+                        <input type="text" name="base" id="base">
+                    </div>
+                    <div>
+                        <label>Color</label>
+                        <input type="text" name="color" id="color">
+                    </div>
+                    <div>
+                        <label>Cambios</label>
+                        <input type="text" name="cambios" id="cambios">
+                    </div>
+                    <div>
+                        <label>Estado</label>
+                        <input type="text" name="estado" id="estado">
+                    </div>
+                    <div>
+                        <label>Proveedor</label>
+                        <input type="text" name="provedor" id="provedor">
+                    </div>
+                    <div>
+                        <label>Fecha Ingreso</label>
+                        <input type="date" name="fechaIngreso" id="fechaIngreso">
+                    </div>
+
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Guardar">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscar por Marca Modelo Imei...">
+                <input type="date" id="myInput1" onclick="myFunction()" >
+                
+                
+                <table class="list" id="employeeList">
+                    <thead>
+                        <tr>
+                            <th>Marca</th>
+                            <th>Modelo</th>
+                            <th>Imei</th>
+                            <th>Base</th>
+                            <th>Color</th>
+                            <th>Cambios</th>
+                            <th>Estado</th>
+                            <th>Proveedor</th>
+                            <th>Fecha Ingreso</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                   
+                    <tbody id="tbody">
+                        
+
+                    </tbody>
+                
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script src="script.js"></script>
+    <script src="buscador.js"></script>
+</body>
+
+</html>
